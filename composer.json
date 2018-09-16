@@ -1,0 +1,14 @@
+{
+    "name": "millsoft/cheatsheets",
+    "description": "A cheatsheet viewer",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Michael Milawski",
+            "email": "mm@millsoft.de"
+        }
+    ],
+    "require": {
+        "paragonie/easydb": "^2"
+    }
+}

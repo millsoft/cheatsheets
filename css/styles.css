@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+
+body{
+	font-family: "Roboto Mono", "Courier New"
+}
+
+h1{
+	font-weight: bold;
+}
+
+.item{
+	display: inline-block;
+	max-width: 300px;
+	width: 100%;
+	border: 1px solid silver;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	background-color: #e5e5e5;
+	box-shadow: #00000045 2px 2px 10px 0px;
+	vertical-align: top;
+}
+
+.cmd{
+	background:black;
+	color: #ffffff;
+	padding:10px;
+	line-height: 1em;
+	font-weight: bold;
+}
+
+
+.render.example{
+	color:silver;
+}
+
+.details .render.example{
+	font-weight: bold;
+	color:black;
+}
+
+
+
+.key{
+	font-weight: bold;
+	border-radius: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 1px solid #ffffff;
+}
+
+.cmd .key{
+	background: #000000;
+}
+
+.item .description .key{
+	background: #a8a8a8;
+	border-color: black;
+}
+
+.metainfo{
+	padding:10px;
+	font-size: 0.8rem;
+}
+
+.metainfo .details{
+	opacity: 0.6;
+	font-size:0.9em;
+}
+
+@media screen and (max-width: 675px) { 
+	body{
+		padding:0px;
+	}
+	.item{
+		max-width: 100%
+	}
+}
+
+
+@media print { 
+	.item{
+		background:none;
+		box-shadow: initial;
+		border:2px solid gray;
+		margin-bottom: 10px;
+		margin-right: 10px;
+	}
+
+	.cmd{
+		background-color:none !important;
+		color:black;
+		font-weight: bold;
+	}
+
+	.cmd .key{
+		background-color:initial;
+		border-color: black;
+	}
+
+	h2, h3 {
+	   page-break-after: avoid;
+	}
+
+	.group{
+		   page-break-inside: avoid;
+	}
+
+}

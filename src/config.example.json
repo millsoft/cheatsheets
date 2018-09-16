@@ -1,0 +1,8 @@
+{
+	"database" : {
+		"server" : "example.com",
+		"username" : "john",
+		"password" : "doe",
+		"database" : "dbname"
+	}
+}
