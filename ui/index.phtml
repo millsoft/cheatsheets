@@ -1,0 +1,15 @@
+{% extends "layout.phtml" %}
+
+{% block content %}
+
+<h1>Welcome to cheatsheets!</h1>
+
+<ul>
+{% for book in books %}
+<li>
+    <a href="cheatsheet/{{ book.cleanname|e }}">{{ book.name|e }}</a>
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

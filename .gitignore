@@ -1,2 +1,5 @@
 vendor
 src/config.json
+src/userconfig.php
+.htaccess
+.idea
