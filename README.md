@@ -2,6 +2,8 @@
 
 A simple cheatsheet viewer. This can be used for everything, eg. VIM, git, etc..
 
+![screenshot](https://raw.githubusercontent.com/millsoft/cheatsheets/master/src/static/screenshot.jpg)
+
 ## Features
 - Displays a list of "cheat sheets" on one page.
 - Renders keyboard keys `{key_ctrl+x}` or examples `{example_helloWorld}` nicely.
