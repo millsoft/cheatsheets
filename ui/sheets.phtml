@@ -1,0 +1,33 @@
+{% extends "layout.phtml" %}
+
+{% block content %}
+
+<a href="{{ path_for('index') }}">Index</a>
+
+<h1>{{ book.name }} Cheatsheet</h1>
+
+{% for category, rows in cheatsheets %}
+	<h2>{{ category }}</h2>
+	
+	{% for row in rows %}
+	<div class="item">
+		<div class="cmd" style="background-color:{{row.bgcolor}}">
+			{{row.cmd_rendered|raw}}
+		</div>
+		<div class="metainfo">
+			<div class="description">
+				{{row.description_rendered|raw}}
+			</div>
+			
+		<div class="details">
+				{{row.details_rendered|raw}}
+			</div>
+		</div>
+
+	</div>
+	{% endfor %}
+
+
+{% endfor %}
+
+{% endblock %}

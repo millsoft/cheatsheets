@@ -27,4 +27,4 @@ ORDER BY c.pos, c.categoryname, i.grp
 
 //$app->get('/', \Millsoft\Cheatsheets\Management::class . ':dashboard')->setName("management.dashboard");
 $app->get('/', Books::class . ':index')->setName("index");
-$app->get('/cheatsheet/{cleanname}', Books::class . ':cheatsheet')->setName("cheatsheet");
+$app->get('/cheatsheet/{cleanname}', Sheets::class . ':cheatsheet')->setName("cheatsheet");
