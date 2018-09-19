@@ -6,12 +6,20 @@
     <base href="{{ base_url() }}/">
     <link rel="stylesheet" href="ui/css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="//cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
 </head>
 <body>
+<div id="app">
+    <h1>Cheatsheets</h1>
+    <hr/>
 
-	<h1>Cheatsheets</h1>
-	<hr/>
+    {% block content %}{% endblock %}
 
-{% block content %}{% endblock %}
+</div>
+
+<script src="ui/js/app.js"></script>
 </body>
 </html>

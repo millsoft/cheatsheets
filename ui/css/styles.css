@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-
+@import url(print.css);
 
 body{
 	font-family: "Roboto Mono", "Courier New"
@@ -19,6 +19,7 @@ h1{
 	background-color: #e5e5e5;
 	box-shadow: #00000045 2px 2px 10px 0px;
 	vertical-align: top;
+	cursor: pointer;
 }
 
 .cmd{
@@ -77,33 +78,3 @@ h1{
 	}
 }
 
-
-@media print { 
-	.item{
-		background:none;
-		box-shadow: initial;
-		border:2px solid gray;
-		margin-bottom: 10px;
-		margin-right: 10px;
-	}
-
-	.cmd{
-		background-color:none !important;
-		color:black;
-		font-weight: bold;
-	}
-
-	.cmd .key{
-		background-color:initial;
-		border-color: black;
-	}
-
-	h2, h3 {
-	   page-break-after: avoid;
-	}
-
-	.group{
-		   page-break-inside: avoid;
-	}
-
-}

@@ -1,0 +1,29 @@
+@media print {
+    .item{
+        background:none;
+        box-shadow: initial;
+        border:2px solid gray;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    .cmd{
+        background-color:none !important;
+        color:black;
+        font-weight: bold;
+    }
+
+    .cmd .key{
+        background-color:initial;
+        border-color: black;
+    }
+
+    h2, h3 {
+        page-break-after: avoid;
+    }
+
+    .group{
+        page-break-inside: avoid;
+    }
+
+}
