@@ -2,9 +2,9 @@
 
 {% block content %}
 <div id="cheatapp">
-<a href="{{ path_for('index') }}">Index</a>
+    <a href="{{ path_for('index') }}">Index</a>
 
-<h1>{{ book.name }} Cheatsheet</h1>
+    <h1>{{ book.name }} Cheatsheet</h1>
 
     <div>
         <h4>Show:</h4>
@@ -23,30 +23,37 @@
 
     </div>
 
-    <div v-for="(group, cat) in cheatsheets">
-        <h2>${cat}</h2>
+    <div v-for="(group, cat) in cheatsheets" class="row cheatgroup">
+        <div class="col-md-12">
+            <h2>${cat}</h2>
+        </div>
 
-        <div class="item" v-for="row in group" @click="toggleVisibility(row)">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6" v-for="row in group">
+                <div class="item" @click="toggleVisibility(row)">
 
-        	<transition name="fade">
-            <div class="cmd" :style="{'background-color': row.bgcolor}"
-                 v-if="cardVisibility == 'all' || cardVisibility == 'cmd' || row.show === true">
-                <span v-html="row.cmd_rendered"></span>
-            </div>
-        	</transition>
+                    <transition name="fade">
+                        <div class="cmd" :style="{'background-color': row.bgcolor}"
+                             v-if="cardVisibility == 'all' || cardVisibility == 'cmd' || row.show === true">
+                            <span v-html="row.cmd_rendered"></span>
+                        </div>
+                    </transition>
 
-			<transition name="fade">
-            <div class="metainfo" v-if="cardVisibility == 'all' || cardVisibility == 'description' || row.show === true">
-                <div class="description">
-                    <span v-html="row.description_rendered"></span>
+                    <transition name="fade">
+                        <div class="metainfo"
+                             v-if="cardVisibility == 'all' || cardVisibility == 'description' || row.show === true">
+                            <div class="description">
+                                <span v-html="row.description_rendered"></span>
+                            </div>
+
+                            <div class="details">
+                                <span v-html="row.details_rendere"></span>
+                            </div>
+                        </div>
+                    </transition>
+
                 </div>
-
-                <div class="details">
-                    <span v-html="row.details_rendere"></span>
-                </div>
             </div>
-			</transition>
-
         </div>
     </div>
 

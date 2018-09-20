@@ -8,20 +8,13 @@ var app = new Vue({
 
     methods: {
         loadSheets: function(){
+            if(typeof BOOK_ID === "undefined"){
+                return false;
+            }
             var t = this;
             axios.get("cheatsheet/" + BOOK_ID + "/j").then(function(resp){
                 t.cheatsheets = resp.data.cheatsheets;
             });
-        },
-
-        toggleCards: function(){
-            if(this.cardVisibility == 0){
-                this.cardVisibility = 1;
-            }else if(this.cardVisibility == 1){
-                this.cardVisibility = 2;
-            }else if(this.cardVisibility == 2){
-                this.cardVisibility = 0;
-            }
         },
 
         toggleVisibility: function(card){

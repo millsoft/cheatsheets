@@ -20,6 +20,7 @@
         "paragonie/easydb": "^2",
         "slim/slim": "^3.11",
         "monolog/monolog": "^1.23",
-        "slim/twig-view": "^2.4"
+        "slim/twig-view": "^2.4",
+        "twbs/bootstrap": "^4.1"
     }
 }

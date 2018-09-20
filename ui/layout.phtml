@@ -2,19 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>VIM Cheatsheet</title>
+    <title>Cheatsheets</title>
     <base href="{{ base_url() }}/">
-    <link rel="stylesheet" href="ui/css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ui/css/styles.css">
 
 </head>
 <body>
-<div id="app">
-    <h1>Cheatsheets</h1>
-    <hr/>
+<div id="app" class="container">
+
+
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills float-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path_for('index') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">Cheatsheets</h3>
+    </div>
 
     {% block content %}{% endblock %}
 

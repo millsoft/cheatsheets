@@ -3,3 +3,4 @@ src/config.json
 src/userconfig.php
 .htaccess
 .idea
+node_modules
