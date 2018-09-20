@@ -27,11 +27,15 @@
         <h2>${cat}</h2>
 
         <div class="item" v-for="row in group" @click="toggleVisibility(row)">
+
+        	<transition name="fade">
             <div class="cmd" :style="{'background-color': row.bgcolor}"
                  v-if="cardVisibility == 'all' || cardVisibility == 'cmd' || row.show === true">
                 <span v-html="row.cmd_rendered"></span>
             </div>
+        	</transition>
 
+			<transition name="fade">
             <div class="metainfo" v-if="cardVisibility == 'all' || cardVisibility == 'description' || row.show === true">
                 <div class="description">
                     <span v-html="row.description_rendered"></span>
@@ -41,6 +45,8 @@
                     <span v-html="row.details_rendere"></span>
                 </div>
             </div>
+			</transition>
+
         </div>
     </div>
 
